@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {{range $hotel := .Hotels}}
+        <h2>{{$hotel.Name}}</h2>
+        <p>{{$hotel.Address}}</p>
+        <p>{{$hotel.City}}</p>
+        <p>{{$hotel.Zip}}</p>
+        <p>{{$hotel.Region}}</p>
+    {{end}}
+</body>
+</html>
