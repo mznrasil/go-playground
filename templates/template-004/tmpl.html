@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+        
+        td, th {
+            border: 1px solid;
+            padding: 4px;
+        }
+
+        thead {
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Open</th>
+            </tr>
+        </thead>
+        {{range $record := .}}
+            <tbody>
+                <tr>
+                    <td>{{$record.Date}}</td>
+                    <td>{{$record.Open}}</td>
+                </tr>
+            </tbody>
+        {{end}}
+    </table>
+</body>
+</html>
