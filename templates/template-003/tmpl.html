@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {{range $hotel := .}}
+        <h2>{{$hotel.Name}}</h2>
+            {{range $menu := $hotel.Menu}}
+                <h3>{{$menu.Meal}}</h3>
+                <ul>
+                    {{range $item := $menu.Items}}
+                        <li>{{$item.Name}} - {{$item.Price}}</li>
+                    {{end}}
+                </ul>
+            {{end}}
+    {{end}}
+</body>
+</html>
