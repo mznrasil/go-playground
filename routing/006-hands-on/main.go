@@ -42,7 +42,7 @@ func request(c net.Conn) {
 			break
 		}
 	}
-	// io.WriteString(c, "Here we WRITE to the response.")
+	io.WriteString(c, "Here we WRITE to the response.")
 }
 
 func respond(c net.Conn) {
