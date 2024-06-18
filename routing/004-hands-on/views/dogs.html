@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Dogs</title>
+  </head>
+  <body>
+    <header>Dogs</header>
+    <ul>
+      {{range $dog := .Dogs}}
+      <li>{{$dog}}</li>
+      {{end}}
+    </ul>
+  </body>
+</html>
